@@ -42,7 +42,7 @@ A virtual appliance is a mininal operating system image packaged alongside some 
 2. Host OS - Provides access to the direct hardware and acts as an intermediary link between the physical hardware and the hypervisor. In a type 1 hypervisor, this will be an OS dedicated to facilitating virtual machines, and in a type 2 hypervisor this will be a more conventional OS like Windows or MacOS.
 
 3. Physical Hardware - this the computer running the Host OS and the hypervisor. This hardware can vary from a personal computer to a datacenter server.
-
+    
 ## Hardware Virtualization
 
 **Question 1** *Verify that the computer you are using for the class is able to handle hardware virtualization. Along with the apps/commands needed to determine whether or not hardware virtualization is enabled, include a screenshot that shows the computer is hardware virtualization enabled. Use something like Snip&Sketch or the equivalent Apple screen shot app.*
