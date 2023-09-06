@@ -106,7 +106,7 @@ Below is a screenshot of my computer's available resources. I used `neofetch` to
 
 **Question 4** *What are the benefits of virtualization, and what is one situation where you would want to use a VM instead of a physical machine?*
 
-*See **Deploying Virtual Machines: Question 4***
+*See **Deploying Virtual Machines: Question 4*** for benefits of virtualization.
 
 A situation I have often used virtualization is evaluating Linux distributions and configurations. If I am thinking of using a new Linux distribution, I can deploy that virtual machine in a type 2 hypervisor overtop my host operating system. This removes the permenant effects of formating a hard drive and installing the OS on bare metal, and also allows for an easier installation since the host machine does not have to be reconfigured. 
 
