@@ -20,3 +20,37 @@
     *   If `h_k -> 0`, then we expect that `f'(a) = lim(k -> inf) (f(a + h_k) - f(a)) / h_k`.
 * for some `k`: `|f'(a) - ((f(a + h_k) - f(a)) / h_k)|` will be a small enough error.
 
+**issues with approximation**
+*   when you make `h` smaller and smaller, an inflection point is reached and the error value starts to increase in size. 
+
+**how memory stores values**
+*   on a 64 bit system:
+    *   first bit is the sign (+/-)
+    *   exponent is the next 11 bits
+    *   manusia is the value of the base which is 52 bits
+*   the maceps of a 64 bit system is `mu <= 1/2 * 2^(-53)`. This is the smallest possible value that can be stored in a 64-bit float.
+    *   computing maceps:
+        *   ```
+            eps = 1
+            a = 0
+            b = a + eps = eps
+
+            b = eps
+            b = eps/2
+            b = eps/2^2
+            ...
+            b = eps/2^k 
+            ```
+            This code does not actually work because it starts acting unpredictably as `b` decreases
+
+        * A better approach, start w value 1 = 2^0
+        ```
+        eps = 1
+        a = 1
+        b = a + esp
+        esp = 1/2
+        b = a + esp
+        error = |a + esp - a|
+        ```
+
+
