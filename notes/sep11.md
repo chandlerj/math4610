@@ -48,3 +48,65 @@ Even if `r(y) ~= 0`, that doees not imply `||x - y|| = 0`.
 
 *   `||v||_inf = max(1 <= i <= n) |v_i|`
 *   P-norm: `||v||_p = ((sum_(i=1)^(n) |v_i|^p) * 1/p)`
+
+
+## time 2 write code
+*September 13*
+
+**Objective**: Evaluate `f'(a)` for a function `f(x)` and evaluate at point `a`. We also need to decide how big/small the `h` we choose can be. 
+*   will implement the approximation of a limit: `f'(x) = (f(x + h) - f(x)) / h`
+
+*   if we choose an `h` too small, the computer will not have enough precision to determine the difference between `x + h` & `h`. essentially, the computer will resolve `x + h == x`
+
+*   we can find our `e_vel` with the funciton `|((1 + h) - 1) / 1|
+`
+
+
+**test_maceps.c**
+```
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+    //float gives about 8 digits of precision. use double for double precision
+    float one, appone, h; 
+    one = 1.0;
+    h = 1.0;
+    appone = one + h;
+    error = fabs(appone - one);
+    while(error > 0.0){
+        h = h / 2.0;
+        appone = one + h;
+        error = fabs(appone-one);
+        printf("error = %g  h = %g\n", error, h);
+    }
+}
+```
+
+This program will give us the smallest possible value, the maceps, that the computer be able to interpret as a change in value if the macep is operated on another value.
+
+## Homework 2
+
+*   write some code with the following funcitonality:
+    *   maceps - single precision version
+    *   maceps - double precision
+        *   we need to put these in seperate files/function to avoid decision branching
+    *   2-norm of a vector
+    *   1-norm of a vector
+    *   infinity-norm (aka, soup/max norm) of a vector
+    *   2-norm distance between two vectors
+    *   1-norm distance between two vectors
+    *   infinity-norm between two vectors
+
+**2-norm.py**
+```
+import numpy as np
+
+def 2norm(vector: list):
+    sum = 0.0
+    n = len(vector)
+    for i in range(n):
+        sum = sum + (vector[i] * vector[i])
+    sum = np.sqrt(sum)
+    return sum
+```
