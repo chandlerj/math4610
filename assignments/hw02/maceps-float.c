@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <math.h>
 
@@ -15,3 +16,4 @@ int main(){
         printf("error = %g  h = %g\n", error, h);
     }
 }
+
