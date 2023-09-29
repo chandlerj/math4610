@@ -120,11 +120,11 @@ fn main() {
     let v2_norm_dist = two_norm_dist(vector, vector2);
     let v1_norm_dist = one_norm_dist(vector, vector2);
     let inf_norm_dist = inf_norm_dist(vector, vector2);
-    // println!("Maceps float to 32-bits of precision: {maceps_f32}");
-    // println!("Maceps float to 64-bits of precision: {maceps_f64}");
-    // println!("two norm of {vector:?}: {v2_norm}");
-    // println!("one norm of {vector2:?}: {v1_norm}");
-    // println!("infinity norm of {vector2:?}: {infinity_norm}");
+    println!("Maceps float to 32-bits of precision: {maceps_f32}");
+    println!("Maceps float to 64-bits of precision: {maceps_f64}");
+    println!("two norm of {vector:?}: {v2_norm}");
+    println!("one norm of {vector2:?}: {v1_norm}");
+    println!("infinity norm of {vector2:?}: {infinity_norm}");
     println!("two norm of {vector:?} & {vector2:?}: {v2_norm_dist}");
     println!("one norm of {vector:?} & {vector2:?}: {v1_norm_dist}");
     println!("inf norm of {vector:?} & {vector2:?}: {inf_norm_dist}");

@@ -64,8 +64,9 @@ import matplotlib.pyplot as plt
 # --------------
 #
 def f(x):
-    fval = x * np.exp(-x)
+    fval = x * np.exp(-x) # .exp = e
     return fval
+
 #
 # the exact derivative expression
 # -------------------------------
@@ -125,7 +126,7 @@ for i in range(napprox):
     # ----------------------------------------------------------
     #
     hval = hval / 2
-        #
+    #
     # print each of the raw data value for the current index, i, increment,
     # hval,and the current error, error[i]
     # ------------------------------------
