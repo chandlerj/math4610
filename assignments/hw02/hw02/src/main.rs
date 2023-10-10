@@ -115,8 +115,8 @@ fn main() {
     let vector:&[f64] = &[2.4,4.0,3.14,2.0];
     let vector2:&[f64] = &[4.0,6.7,4.9,-4.5];
     let v2_norm = two_norm(vector);
-    let v1_norm = one_norm(vector2);
-    let infinity_norm = inf_norm(vector2);
+    let v1_norm = one_norm(vector);
+    let infinity_norm = inf_norm(vector);
     let v2_norm_dist = two_norm_dist(vector, vector2);
     let v1_norm_dist = one_norm_dist(vector, vector2);
     let inf_norm_dist = inf_norm_dist(vector, vector2);

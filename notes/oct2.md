@@ -3,7 +3,7 @@
   type="text/javascript">
 </script>
 
-# math 4610: *cock*tober 2
+# math 4610: *ock*tober 2
 *spooky version*
 
 the error function `erf` is defined as:
