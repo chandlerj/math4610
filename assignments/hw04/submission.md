@@ -25,5 +25,7 @@ test-lib.c
 
 which can be found on my github repositiory at [this link](https://github.com/chandlerj/math4610/tree/main/mathlib/src).
 
+**Question 2**: Create object modules for the routines
+
 
 
