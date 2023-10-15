@@ -23,5 +23,7 @@ smaceps.c
 test-lib.c
 ```
 
-which can be found at 
+which can be found on my github repositiory at [this link](https://github.com/chandlerj/math4610/tree/main/mathlib/src).
+
+
 
