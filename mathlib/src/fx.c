@@ -1,5 +1,5 @@
 double f(double x){
-    double fval = x + 1;
+    double fval = x * x;
 
     return fval; 
 }

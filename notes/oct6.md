@@ -190,3 +190,65 @@ We can derive the following relationship from this procedure.
 $$
 MA = U\\ A = M^{-1} U = LU
 $$
+
+*October 11*
+
+## Gaus Elimination Continued
+
+**Theorem**: Suppose that `A` is an element of the `R^(n x m)` set and is diagonally dominant then guassian elimination of `A` produces no zero pivot elements.
+
+**Definition:** `A` is diagonally dominant if for each `i = 1, 2, ..., n`,
+then
+
+$$
+|a_{i,i}| \geq \sum_{j=1}^{n} |a_{i,j}|
+$$
+
+with strict magnitude for at least row 2. (?)
+
+**Test our GE w/ Back substitution**
+*   Generate a diagonally dominant matrix.
+    *   set `a_{i,j}` to be a random number `[0,1]`
+    *   set `a_{i,i} = n + 1`
+    *   this gives you matrix `A`
+*   set 
+$$ A = 
+\begin{pmatrix}
+1\\1\\1\\...\\1\\
+\end{pmatrix}
+$$
+
+* compute `b = Ay`
+* solve `Ax = b`
+* Compute an `L2-Distance(x,y)`
+
+*October 13*
+
+## LU-Factorization
+
+we need to solve `A = LU`. To find this solution we need to compute `Ly = b` and `Ux = y`. Solving `Ux = y` will implement back substition
+
+## Forward Elimination
+This will allow us to 
+```
+y[0] = b[0]
+for i in range(1, n):
+    sum = 0.0
+    for j in range(i - 1):
+        sum = sum + a[i][j] * y[j]
+    y[i] = b[i] - sum
+```
+
+**How to test the code**
+*   Generate a diagonally dominant matrix `A`
+    *   randomly fill a matrix with values [0,1], and then multiply the diagonal values by a large constant to make the matrix diagonally dominant.
+*   perform matrix multiplication of `A[1,1,1,...,1]^T = b`, `y = [1,1,1,1,...,1]^T`
+*   solve `Ax = b`
+*   error = `||x - y||`
+
+# Root Finding (New topic)
+
+problem description: Find `X in Reals` such that `f(x) = 0`.
+
+If `g(x)` is a function and we want to find `x` such that `g(x)` is external, then we find `x in reals` s.t. `g'(x) = 0`.
+
