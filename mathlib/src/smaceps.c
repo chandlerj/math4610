@@ -12,7 +12,7 @@ float smaceps(){
         h = h / 2.0;
         appone = one + h;
         error = fabs(appone - one);
-        printf("error = %g  h = %g\n", error, h);
+        // printf("error = %g  h = %g\n", error, h);
     }
     return h;
 }

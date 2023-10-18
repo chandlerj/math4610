@@ -12,6 +12,8 @@
 #include "dfapp_backward.c"
 #include "dfapp_central.c"
 #include "reduce_matrix.c"
+#include "smaceps.c"
+#include "dmaceps.c"
 
 double l2_norm(double v[], int vec_len);
 double l1_norm(double v[], int vec_len);
@@ -26,12 +28,15 @@ double dfapp_central(double x, double h);
 const char* linreg(double x_vec[], double y_vec[], int length);
 void reduce_matrix();
 int main(){
+    //maceps tests
+    printf("32 bit macepts value: %g\n", smaceps());
+    printf("64 bit macepts value: %g\n", dmaceps());
     //vector operations
     double vector[4] = {2.4, 4.0, 3.14, 2.0};
     double vector2[4] = {4.0, 6.7, 4.9, -4.5};
     printf("l2-norm: %g\n", l2_norm(vector, 4));
     printf("l1-norm: %g\n", l1_norm(vector, 4));
-    printf("l1-norm: %g\n", inf_norm(vector, 4));
+    printf("inf-norm: %g\n", inf_norm(vector, 4));
     printf("l2-dist: %g\n", l2_dist(vector, vector2, 4, 4));
     printf("l1-dist: %g\n", l1_dist(vector, vector2, 4, 4));
     printf("linf-dist: %g\n", linf_dist(vector, vector2, 4, 4));

@@ -252,3 +252,158 @@ problem description: Find `X in Reals` such that `f(x) = 0`.
 
 If `g(x)` is a function and we want to find `x` such that `g(x)` is external, then we find `x in reals` s.t. `g'(x) = 0`.
 
+*Syntax*: 
+*   `x^*`: root of `f`
+*   `y^*`: solution of `y* = g(y*)`
+
+given this information:
+
+$$
+|x^* - y^*| = |x^* - (y^* - f(y^*))\\
+= |x^* - y^* + 0|\\
+= |x^* - y^*|
+$$
+
+We can also deduce:
+$$
+|x_{k+1} - x^*| = |g(x_k) - g(x^*)|\\
+= |(g(x^*) + g'(x^*)(x_k - x^*) + ...) -g(x^*)|\\
+= |g'(x^*)(x_k - x^*) + h.o.t|\\
+\leq |g'(x^*)(x_k - x^*)|\\
+=|g'(x^*)| |x_k - x^*|
+$$
+
+We want a more robust algorithm!!! We will look to calculus for our saving grace.
+
+We will use the **Intermediate Value Theorem**:
+
+Suppose `f(x)` is a continuous function on the closed interval `[a,b]`. This means `lim(x -> 0) f(x) = f(0)` for all `x in (a,b)` and `lim(x -> a^+)f(x) = f(a), lim(x -> b^-)f(x) = f(b)`. Then if `S` in a number between `f(a)` and `f(b)`, then there exists a point `c in (a,b)` such that `f(c) = S`.
+
+Here is the algorithm we want to use:
+
+$$
+c = \frac{1}{2}(a + b)\\
+$$
+
+check `f(c) = 0`, and redefine the search interval accordingly
+
+if `f(a) * f(c) = 0`:
+`b = c; else a = c` (pick a subset of the interval)
+
+determine error: `b - a`
+
+**in da code**
+```
+#python3
+
+def find_root(f: (), a, b, tol, maxiter):
+    fa = f(a)
+    fb = f(b)
+    c = 0
+    # err = (b - a)/2
+    err = 10 * tol
+    itercount = 0
+    while error > tol and itercount < maxiter:
+        c = (a + b) / 2
+        fc = f(c)
+        if fa * fc < 0:
+            b = c
+            fb = fc
+        else:
+            a = c
+            fa = fc
+        error = b - a
+        itercount += 1
+    return c
+```  
+
+## Pseudocode for reduce matrix
+input: `f(x), a, b, tol, maxiter`
+
+initialize: `Error = 10 * tol`
+
+`iter = 0`
+
+`fa = f(a)`
+
+`fb = f(b)`
+
+`if (fa == 0) return a`
+
+`elif (fb == 0) return b`
+
+**Analyzing error**: 
+$$
+e_0 \leq b - a = b_0 - a_0\\
+e_1 \leq b_1 - a_1 = \frac{1}{2}(b_0 - a_0)
+e_2 \leq b_2 - a_2 = \frac{1}{2}(b_1 - a_1) = (\frac{1}{2})^2(b_0 - a_0)\\
+...\\
+e_k \leq b_k - a_k = (\frac{1}{2})^k(b_0 - a_0)\\
+...\\
+e_k \leq b_k - a_k = (\frac{1}{2})^k(b_0 - a_0) = tol\\
+\log((\frac{1}{2})^k(b_0 - a_0)) = \log(tol)\\
+\log((\frac{1}{2})^k) + \log(b_0 - a_0) = \log(tol)\\
+\log((\frac{1}{2})^k)  = \log(tol) - \log(b_0 - a_0)\\
+k\log(\frac{1}{2}) = \log(\frac{tol}{b_0 - a_0})\\
+k \geq \frac{\log(\frac{tol}{b_0 - a_0})}{\log(\frac{1}{2})}\\
+$$
+
+**Da code V2**
+
+*input*: `f(x), a, b, tol, maxiter`
+```
+#python3
+import numpy as np
+
+def find_roots(f: (), a, b, tol):
+    fa = f(a)
+    fb = f(b)
+    if fa == 0:
+        return a
+    elif fb == 0:
+        return b
+    
+    if fa * fb > 0:
+        print("root cannot be guranteed on this interval")
+    k = int(np.log(tol / b - a) / np.log(1/2)) + 1 # Consider using log_2 versus log_10
+    for i in range(k):
+        c = 0.5 * a + b # midpoint
+        fc = f(c)
+        if fa * fc < 0:
+            b = c
+            fb = fc
+        else:
+            a = c
+            fa = fc
+    return c
+
+
+```
+
+**Definition**: The Bisection method applied to an interval applied to an interval `[a,b]` for a continuous function will reduce the error each time through by *at least* `1/2`.
+
+$$
+|x_k - x_*| \leq \frac{1}{2}|x_k - x_*|\\
+
+\frac{|x_{k + 1} - x_*|}{|x_k - x_*|} \leq \frac{1}{2}\\
+
+\frac{|x_{k + 1} - x_*|}{|x_k - x_*|} \leq p = |g'(x_*)|
+$$
+
+The relationship described above is referred to as **Functional iteration**.
+
+## Newton Method
+
+describes the relationship between `f(x)` and `x`. This can be used to find the root. We can take our initial guess `x_0`, and then construct a tangent line at that point, from there, we can repeat this process evaluating on the tangent line. 
+
+$$
+y(x) = f(x_0) + f'(x_0)(x - x_0)\\
+
+x_1 = x_0 - \frac{f(x_0)}{f'(x_0)}\\
+...\\
+x_{k+1} = x_k - \frac{f(x_k)}{f'(x_k)}\\
+
+e_{k+1} = x_{k+1} - x_*\\
+
+$$
+
