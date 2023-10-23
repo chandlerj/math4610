@@ -93,8 +93,58 @@ backwards approx of derivative of x * x at x = 10, h = 0.01: 19.99
 linear regression of (2,4), (3,5), (5,7), (7,10), (9,15): y = 1.518293x + 0.304878
 ```
 
+
 **Question 6**: Create a software documentation page for each of the routeines you have created
 
+My software documentation page can be found at [**this link**](https://github.com/chandlerj/math4610/blob/main/mathlib/doc/documentation.md#math-4610-fundamentals-of-computational-mathematics-mathlib-manual).
 
+**Question 7**: Create routines that reduce a square matrix into an upper triangular matrix and use back substitution to solve the resulting matrix
 
+For my implementation, I placed the matrix reduction and back substitution into one routine. The link to the source code for this implementation is available at [**this link**](https://github.com/chandlerj/math4610/blob/main/mathlib/src/reduce_matrix.c). 
 
+**Question 8**: Include a test problem in your test code and make sure matrix reduction results are accurate for a linear system contained in a matrix with at least `10` rows and `10` columns.
+
+For my test code, I reduced the following matrix
+```
+3 0 0 0 0 0 0 0 0 0
+0 1 0 0 0 0 0 0 0 0
+0 0 3 0 0 0 0 0 0 0
+0 0 0 5 0 0 0 0 0 0
+0 0 0 0 5 0 0 0 0 0
+0 0 0 0 0 2 0 0 0 0
+0 0 0 0 0 0 6 0 0 0
+0 0 0 0 0 0 0 2 0 0
+0 0 0 0 0 0 0 0 9 0
+0 0 0 0 0 0 0 0 0 5
+```
+
+which reduces to the following solutions
+```
+ x1=1.000000
+
+ x2=1.000000
+
+ x3=1.000000
+
+ x4=1.000000
+
+ x5=1.000000
+
+ x6=1.000000
+
+ x7=1.000000
+
+ x8=1.000000
+
+ x9=1.000000
+
+ x10=1.000000
+```
+
+**Question 9**: Validate the results of the test in question 8 using the tools developed in the shared library.
+
+We can use the `l1-dist` function to determine the difference between the results obtained from `reduce-matrix` and the actual results. Creating a vector from the solutions obtained by my algorithm, and comparing them to the actual answer, I get a difference of `0`, meaning my algorithm produced accurate results.
+
+**Question 10**: Create a table of contents for your software manual.
+
+My table of contents is located at [**this link**](https://github.com/chandlerj/math4610/blob/main/mathlib/src/reduce_matrix.c).
