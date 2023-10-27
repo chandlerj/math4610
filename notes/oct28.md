@@ -1,3 +1,8 @@
+<script
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+  type="text/javascript">
+</script>
+
 ## Matrix Multiplication into a vector
 *October 23*
 
