@@ -1,4 +1,4 @@
-# HW02
+# Math 4610 - HW02
 *Chandler Justice - A023213187*
 
 ## introduction
@@ -174,4 +174,26 @@ These functions produce the following output:
 two norm of [2.4, 4.0, 3.14, 2.0] & [4.0, 6.7, 4.9, -4.5]: 7.429508732076435
 one norm of [2.4, 4.0, 3.14, 2.0] & [4.0, 6.7, 4.9, -4.5]: 12.56
 inf norm of [2.4, 4.0, 3.14, 2.0] & [4.0, 6.7, 4.9, -4.5]: 6.5
+```
+
+### Library Structure
+
+Below is a representation of how my library is organized
+
+```
+- hw02
+    - bin
+        - readme.md
+    - data
+        - readme.md
+    - doc
+        - readme.md
+    - inc
+        - readme.md
+    - lib
+        - readme.md
+    - src
+        - main.rs # This contains my implementations for this assignment
+        - readme.md
+
 ```

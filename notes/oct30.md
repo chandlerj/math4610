@@ -88,3 +88,82 @@ if `v` is an eigenvector of `A` with eigenvalue `lambda` then
 $$
 \frac{v^t A v}{v^t v} = \lambda
 $$
+
+*November 1*
+
+### Power Method
+
+$$
+A \in \R^{n * n}
+$$
+
+`A` has a dominant eigenvalue (Magnitude)
+
+**Implementation**
+
+**Inputs**: `A`, `v0`, `tol`, `maxIter`
+
+```
+import numpy as np
+
+def power_method(A: np.array, v0: np.array, tol: Int, matIter: Int):
+    #initialization of params
+    error = 10 * tol # guarantees at least 1 iteration
+    lambda0 = 0
+
+    #loop tim
+    while (error > tol and iter < maxiter):
+        y = A * v0
+        v1 = 1 / magnitude(y) * y # Rayleigh quotient
+        lambda1 = transpose(v1) * A * v1
+        error = abs(lambda1 - lambda0)
+        lambda0 = lambda1
+    return lambda1 # largest eigenvalue
+```
+
+This routine will return the largest eigenvalue of a matrix. It is very inefficient and has plenty of room for optimizations.
+
+**Modified power method**
+
+This implementation will have a shorter computation runtime. This is because we only do one matrix vector operation versus the origanal implementation which does two matrix vector operations.
+
+**Inputs**: `A`, `v0`, `tol`, `maxIter`
+```
+def imp_power_method(A, v0, tol, maxIter):
+    #initialization of parameters
+    v0 = 1/magnitude(v0) * v0
+    y = A * v0
+    lambda0 = transpose(v0) * y
+    error = 10 * tol
+    iter = 0
+
+    #da loop
+    while error > tol and iter < maxIter:
+        v1 = 1 / magnitude(y) * y
+        y = A * v1
+        lambda1 = transpose(v1) * y
+        error = abs(lambda1 - lambda0)
+        iter += 1
+        lambda0 = lambda1
+    return lambda1 # largest eigenvalue
+```
+
+What if we want more than one eigenvalue? We can modify this algorithm to provide the smallest eigenvalue (in magnitude)
+
+$$
+|\lambda_1| \geq |\lambda_2| \geq ... \geq |\lambda_{n-1}| \geq |\lambda_n| > 0
+$$
+
+**Theorem**: if `lambda` is an eigenvalue of `A in R^{n * n}`, then `1 / lambda` is an eigenvalue of `A^{-1}.
+
+*Hand-wave* **Proof**:
+
+Assume
+$$
+Av = \lambda v\\
+$$
+then,
+$$
+v = \lambda A^{-1} v\\
+A^{-1} v = \frac{1}{\lambda} v
+$$

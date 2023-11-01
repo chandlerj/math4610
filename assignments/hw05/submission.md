@@ -161,4 +161,6 @@ hw05
 
 **Question 10**: Write a software manual for the package
 
-**Solution**: I am not going to include my whole manual in this document as it would more than double the length of the submittable. Below I have included a link to my GitHub repository where the software manaual is hosted
+**Solution**: I am not going to include my whole manual in this document as it would more than double the length of the submittable. Below I have included a link to my GitHub repository where the software manaual is hosted:
+
+https://github.com/chandlerj/math4610/blob/main/assignments/hw05/doc/softwareManual.md 
