@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.11.2)  3 NOV 2023 11:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.11.2)  6 NOV 2023 10:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -597,14 +597,92 @@ Underfull \hbox (badness 10000) in paragraph at lines 84--85
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 86--88
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--89
 
  []
 
 [1
 
-{/home/chandler/.miktex/texmfs/data/fonts/map/pdftex/pdftex.map}] [2]
-(nov3.aux)
+{/home/chandler/.miktex/texmfs/data/fonts/map/pdftex/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 91--92
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--96
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--99
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--102
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 103--104
+
+ []
+
+
+LaTeX Font Warning: Font shape `OT1/ccr/b/n' undefined
+(Font)              using `OT1/ccr/bx/n' instead on input line 105.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 105--106
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 107--125
+
+ []
+
+
+! LaTeX Error: Environment listings undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.148 \begin{listings}
+                      
+? 
+
+! LaTeX Error: \begin{document} ended by \end{listings}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.157 \end{listings}
+                    
+? 
+
+Underfull \hbox (badness 10000) in paragraph at lines 150--158
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--160
+
+ []
+
+[2] (nov3.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-10-23>
@@ -615,28 +693,31 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 4500 strings out of 474719
- 68258 string characters out of 5751795
- 1931033 words of memory out of 5000000
- 26477 multiletter control sequences out of 15000+600000
+ 4502 strings out of 474719
+ 68316 string characters out of 5751795
+ 1934033 words of memory out of 5000000
+ 26479 multiletter control sequences out of 15000+600000
  566987 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,5n,65p,319b,265s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,8n,65p,319b,265s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/chandler/.miktex/texmfs/data/fonts/pk/ljfour/public/ecc/dpi720/torm10
 .pk> </home/chandler/.miktex/texmfs/data/fonts/pk/ljfour/public/concmath-fonts/
 dpi720/xccsy10.pk> </home/chandler/.miktex/texmfs/data/fonts/pk/ljfour/public/c
 oncrete/dpi720/ccti10.pk> </home/chandler/.miktex/texmfs/data/fonts/pk/ljfour/p
 ublic/concrete/dpi720/ccr10.pk></home/chandler/.miktex/texmfs/install/fonts/typ
 e1/public/amsfonts/cm/cmbx12.pfb></home/chandler/.miktex/texmfs/install/fonts/t
-ype1/public/amsfonts/cm/cmsy10.pfb></home/chandler/.miktex/texmfs/install/fonts
-/type1/public/amsfonts/euler/euex10.pfb></home/chandler/.miktex/texmfs/install/
-fonts/type1/public/amsfonts/euler/eufm10.pfb></home/chandler/.miktex/texmfs/ins
-tall/fonts/type1/public/amsfonts/euler/eurm10.pfb></home/chandler/.miktex/texmf
-s/install/fonts/type1/public/amsfonts/euler/eurm7.pfb></home/chandler/.miktex/t
-exmfs/install/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on nov3.pdf (2 pages, 69129 bytes).
+ype1/public/amsfonts/cm/cmex10.pfb></home/chandler/.miktex/texmfs/install/fonts
+/type1/public/amsfonts/cm/cmmi12.pfb></home/chandler/.miktex/texmfs/install/fon
+ts/type1/public/amsfonts/cm/cmsy10.pfb></home/chandler/.miktex/texmfs/install/f
+onts/type1/public/amsfonts/euler/euex10.pfb></home/chandler/.miktex/texmfs/inst
+all/fonts/type1/public/amsfonts/euler/eufm10.pfb></home/chandler/.miktex/texmfs
+/install/fonts/type1/public/amsfonts/euler/eurm10.pfb></home/chandler/.miktex/t
+exmfs/install/fonts/type1/public/amsfonts/euler/eurm7.pfb></home/chandler/.mikt
+ex/texmfs/install/fonts/type1/public/amsfonts/euler/eusm10.pfb></home/chandler/
+.miktex/texmfs/install/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on nov3.pdf (2 pages, 97637 bytes).
 PDF statistics:
- 119 PDF objects out of 1000 (max. 8388607)
+ 147 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

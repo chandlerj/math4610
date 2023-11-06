@@ -84,9 +84,79 @@ The idea is choose $\mu$ close our eigenvalue. We can use inverse iteration to d
 $v_0 = a_1 v_1 + a_2 v_2 + ... + a_n v_n$\\
 
 $Av_0 = a_1(\lambda_1 v_1) + a_2 (\lambda_2 v_2) + ... + a_n (\lambda_n v_n)$\\
+
+where $\lambda_1 /> \lambda_2 \geq ... \geq \lambda_{n-1} /> 0$\\
+
+
+\textit{Properties}\\
+
+1. $\frac{Av_k}{||v_k||} \rightarrow v_1$\\
+
+2. $\frac{v_k^t A_{v_k}}{v_k^t v_k}$\\
+
+
+3. If $\lambda$ is an eigenvalue of $A$, the $\frac{1}{\lambda}$ is an eigenvalue of $A^{-1}$ \\
+
+4. $A \vec{v} = \lambda \vec{v} \rightarrow A \vec{v} - \mu v = (\lambda - \mu) v \rightarrow (A - \mu I) v$.\\
+\quad If $\lambda$ is an eigenvalue of $A$, then $\lambda - \mu$ is an eigenvalue of $A \mu I$\\
+
+Using this approach allows us to utilize parallelism. This means we can use a tool like \textit{openMP} to easily parallelize code written in C, C++, fortran, etc\\
+
+\textbf{Lamczos Algorithm}\\
+
+$Ax \rightarrow b$\\
+$
+\begin{bmatrix}
+	\sum_{j=i}^n a_{i,j} x_j\\
+	\sum_{j=i}^n a_{i,j} x_j\\
+	...\\
+\end{bmatrix}
+$
+=
+$
+\begin{bmatrix}
+	b_{1}\\
+	b_{2}\\
+	...\\
+	b_{n}\\
+\end{bmatrix}
+$
+=\\
+
+$ x_1
+\begin{bmatrix}
+	a_{1,1}\\
+	a_{1,2}\\
+	...\\
+	a_{1,n}\\
+\end{bmatrix}
++ x_2
+\begin{bmatrix}
+	a_{2,1}\\
+	a_{2,2}\\
+	...\\
+	a_{2,n}\\
+\end{bmatrix}
++ ... + x_n
+\begin{bmatrix}
+	a_{n,1}\\
+	a_{n,2}\\
+	...
+	a_{n,n}\\
+\end{bmatrix}
+$
+\begin{listings}
+
+for(int i = 0; i < n; i++)\{\\
+	double sum = 0.0;\\
+	for(int j = 0; j < n; j++)\{\\
+		sum += a[i][j] * x[j];\\
+	\}\\
+	b[i] = sum;\\
+	\}\\
+\end{listings}
+
 \noindent \underline{\hspace{3in}}\\
-
-
 
 
 \end{document}
