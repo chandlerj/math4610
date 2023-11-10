@@ -1,0 +1,89 @@
+\documentclass[10pt, AMS Euler]{article}
+\textheight=9.25in \textwidth=7in \topmargin=-.75in
+ \oddsidemargin=-0.25in
+\evensidemargin=-0.25in
+\usepackage{url}  % The bib file uses this
+\usepackage{graphicx} %to import pictures
+\usepackage{amsmath, amssymb}
+\usepackage{theorem, concrete, multicol, color}
+
+
+\setlength{\intextsep}{5mm} \setlength{\textfloatsep}{5mm}
+\setlength{\floatsep}{5mm}
+\setlength{\parindent}{0em} % new paragraphs are not indented
+
+
+%%%%  SHORTCUT COMMANDS  %%%%
+\newcommand{\ds}{\displaystyle}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\arc}{\rightarrow}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\blank}{\underline{\hspace{0.33in}}}
+\newcommand{\qand}{\quad and \quad}
+\newcommand{\stirling}[2]{\genfrac{\{}{\}}{0pt}{}{#1}{#2}}
+\newcommand{\dydx}{\ds \frac{d y}{d x}}
+\newcommand{\ddx}{\ds \frac{d}{d x}}
+\newcommand{\dvdx}{\ds \frac{d v}{d x}} 
+
+%%%%  footnote style %%%%
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{flushright}
+Chandler Justice - A02313187
+\end{flushright}
+
+\textbf{Introduction to OpenMP}\\
+
+\ds\textit{Preprocessor Directives, variables, functions}\\
+
+\begin{itemize}
+  \item \#pragma omp parallel num\_threads(n)\\
+    This initializes a parallel region. This means OpenMP will try to automatically optimize the region for parallel execution. \textbf{Note:} The region that needs to be parallelized will need to be surrounded by curly braces.
+  \item \#include  $<$omp.h$>$\\ This directive tells the linker to pull in the OMP function signatures. This allows us to use openMP in our applicaiton
+  \item omp\_get\_thread\_num()\\ This will return the rank of the thread running the application. This is the id of the rank running a parallel region
+  \item omp\_set\_num\_threads(n)\\ Requests $n$ threads at runtime.
+
+\end{itemize}
+
+\textit{fork-join parapllelism}\\
+This is a paradigm wherein a main thread spawns a team of threads as needed. this number of spawned threads can either be manually specified, or OpenMP can automatically allocate a number of threads aligned with your system specifications.\\
+
+The main thread will fork out a job into multiple ranks/threads (they mean the same thing), and each worker thread will compute a smaller distrubition of the work. Once the work is completed, the threads will all "join" their results back to the main thread. This means the main thread will facilitate allocation and collection of work from all ranks. This process is all facilitated automatically by the \#prama omp parallel preprocessor directive. \\
+
+\textit{misc. notes and insights}\\
+
+\begin{itemize}
+  \item OpenMP is \textbf{non-deterministic}. This means that there is no guarantee in the order which threads will execute code. For example, one execution the first thread (rank 0) could run a line of code first, and then the next execution of the same program the third thread (rank 2) could run the same line of code first.
+  \item Since we are working with multiple threads, the possibility of \textbf{race conditions} exist. This means two different threads (ranks) are trying to write to the same memory address. This causes undefined behavior.
+\end{itemize}
+
+\textit{Example: Approximating $\pi$}\\
+We know $\pi$ can be approximated using:\\
+$ \int_0^1 \frac{4.0}{(1 + x^2)} dx = \pi $\\
+
+\newpage
+
+\textit{serial implementaiton example}\\
+
+static long num\_steps = 10000;\\
+double step;\\
+void main()\\
+\{ int i; double x, pi, sum = 0.0;\\
+step = 1.0/(double) num\_steps;\\
+
+for(int i = 0; i < num\_steps; i++)\{
+  x = (i + 0.5) * step;\\
+  sum += 4.0 / (1.0 + x * x);\\
+\}\\
+pi = step * sum;\\
+\}\\
+
+\end{document}
+
