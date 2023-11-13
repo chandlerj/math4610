@@ -85,5 +85,79 @@ for(int i = 0; i < num\_steps; i++)\{
 pi = step * sum;\\
 \}\\
 
+
+\textbf{November 13}\\
+
+\textit{Leslie Matrix}\\
+
+$n_{t+1} = L n_t$\\
+$
+\begin{bmatrix}
+  f_0 & f_1 & f_2 & ... & f_{n - 1}\\
+  s_0 & 0 & 0 & ... & 0\\
+  0 & s_1 & 0 & ... & 0\\
+  ... & ... & ... & ... & ...\\
+  0 & 0 & ... & s_{\omega - 2} & 0\\
+\end{bmatrix}
+$
+
+\textit{properties}:
+\begin{itemize}
+  \item $f_x$ is the feumdity of the age class
+  \item $s_x$ is the proportion of individiuals who share from $x \to x+1$
+  \item $n_t$ is the vector containing $K_1$ of methods in each plan(?)
+\end{itemize}
+
+\textit{example}: Find the largest eigenvalue \& eigenvector\\
+$
+n_1 = L n_0 \in \R^\omega\\
+\omega x \omega \quad matrix\\
+n_0 = \alpha_1 v_1 + \alpha_2 v_2 + ... + \aplha_n v_n\\
+n_k = l^k n_0\\
+$\\
+
+We can use the \textbf{power method} to find the eigenvalues of the Leslie matrix\\
+$
+Ln_0 = 
+\begin{bmatrix}
+  \sum_{j=0}^{w-1} f_j \* (n_u)_j \\
+  s_0 (n_0)_0\\
+  s_1 (n_0)_1\\
+  s_2 (n_0)_2\\
+  ...\\
+  s_{\omega - 2} (n_0)_{\omega - 2}\\
+\end{bmatrix}
+$
+, For example
+$
+n_0 =
+\begin{bmatrix}
+  10\\
+  9\\
+  7\\
+  12\\
+  ...\\
+\end{bmatrix}
+\rightarrow (n_0)_0 = 10; (n_0)_1 = 9\\
+$
+
+\textit{Companion Matrix}\\
+
+$
+\begin{bmatrix}
+  a_{n-1} & a_{n-2} & ... & a_0\\
+  1 & 0 & ... & 0\\
+  0 & 1 & ... & 0\\
+  ... & ... & 1 & ...\\
+  0 & 0 & ... & 0\\
+$
+
+
+\textit{example}: 
+$
+\frac{d^2 y}{dx^2} + 3 \frac{dy}{dx} + \sin(x)y = 0\\
+\frac{d^2y}{dx^2} = \frac{y^{x+h} - 2y(x) + y(x + h)}{h^2}\\
+\frac{dy}{dx} = \frac{y(x + h) - y(x - h)}{2h}
+$
 \end{document}
 
