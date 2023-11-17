@@ -150,6 +150,7 @@ $
   0 & 1 & ... & 0\\
   ... & ... & 1 & ...\\
   0 & 0 & ... & 0\\
+\end{bmatrix}
 $
 
 
@@ -158,6 +159,16 @@ $
 \frac{d^2 y}{dx^2} + 3 \frac{dy}{dx} + \sin(x)y = 0\\
 \frac{d^2y}{dx^2} = \frac{y^{x+h} - 2y(x) + y(x + h)}{h^2}\\
 \frac{dy}{dx} = \frac{y(x + h) - y(x - h)}{2h}
+$\\
+
+
+\textit{operations in Leslie matrix}\\
 $
+L n_0 \to n_1\\
+n_{1,1} = \sum_{j=0}^{\omega - 1} f_j n_{0, j} \to dot\\
+z_k = f_1 n_{0,j}\\
+$
+
+we want to separate these two operations into two parallel region. So each operation needs to be in its own parallel block
 \end{document}
 

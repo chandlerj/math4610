@@ -1,0 +1,119 @@
+\documentclass[10pt, AMS Euler]{article}
+\textheight=9.25in \textwidth=7in \topmargin=-.75in
+ \oddsidemargin=-0.25in
+\evensidemargin=-0.25in
+\usepackage{url}  % The bib file uses this
+\usepackage{graphicx} %to import pictures
+\usepackage{amsmath, amssymb}
+\usepackage{theorem, concrete, multicol, color}
+
+
+\setlength{\intextsep}{5mm} \setlength{\textfloatsep}{5mm}
+\setlength{\floatsep}{5mm}
+\setlength{\parindent}{0em} % new paragraphs are not indented
+
+
+%%%%  SHORTCUT COMMANDS  %%%%
+\newcommand{\ds}{\displaystyle}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\arc}{\rightarrow}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\blank}{\underline{\hspace{0.33in}}}
+\newcommand{\qand}{\quad and \quad}
+\newcommand{\stirling}[2]{\genfrac{\{}{\}}{0pt}{}{#1}{#2}}
+\newcommand{\dydx}{\ds \frac{d y}{d x}}
+\newcommand{\ddx}{\ds \frac{d}{d x}}
+\newcommand{\dvdx}{\ds \frac{d v}{d x}} 
+
+%%%%  footnote style %%%%
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{flushright}
+Chandler Justice - A02313187
+\end{flushright}
+\noindent \underline{\hspace{3in}}\\
+
+\textit{Iterative methods for solutions of linear systems of equations}\\
+
+Lets say we have an equation of the form $Ax =b$, we can decompose the matrix $A$ into the following form:
+
+\begin{center}
+  $
+  L =
+  \begin{bmatrix}
+    0 & 0 & ... & 0\\
+    a_{21} & 0 & ... & 0\\
+    a_{31} & a_{32} & ... & 0\\
+    ... & ... & ... & ...\\
+    a_{n-1} & ... & a_{n, n-1} & 0\\
+  \end{bmatrix}
+  D = 
+  \begin{bmatrix}
+    a_{11} & 0 & ... & 0\\
+    0 & a_{21} & ... & 0\\
+    ... & ... & ... & ...\\
+    ... & ... & ... & a_{nm}\\
+  \end{bmatrix}
+  $\\
+  ...and an upper triangular matrix; that I am not going to write but you get the idea.\\
+\end{center}
+
+\textit{Theorem:} If $A$ is a diagonally dominant matrix then jacobi iteration converges to the solution of $Ax = b$.\\
+
+$
+x_1 = D^{-1}(b - (L + U)x_0)\\
+x_{k+1} = D^{-1}(b - (L + U)x_k)\\
+x_{k+m} = D^{-1}(b - (L + U)x_k) = D^{-1}(b - (L + D + U)x_k + Dx_k)\\
+\rightarrow = D^{-1}(b - Ax_k + Dx_k) = D^{-1} r_k + x_k = x_k + D^{-1}r_k\\
+$\\
+
+
+\textbf{Note:} $b - Ax_k$ is he residual vector. Recall the residual is defined as:\\
+$Ax = b \rightarrow r = b - Ax$\\
+
+We can use this to create the conditional: if $||r_k||_2 \leq tol \rightarrow$ STOP.\\
+
+\textit{Jacobi Iteration}\\
+
+\textbf{Inputs:} $A, x_0$\\
+
+\textbf{Loop:}\\
+$r = b - Ax \quad$ for all $k = 0,1,2,..$\\
+$x_{k+1} = x_k + D^{-1} r_k$\\
+error = $|| b - Ax_k||$\\
+$x_k = x_{k + 1}$\\
+
+Since $D$ is a diagonal matrix, $D^{-1}$ will just be $\frac{1}{D}$, which gives us our $x_{k+1}$ modified matrix.\\
+
+Lets talk more about some tricks with the residual:\\
+$
+r_{k+1} = b - Ax_{k+1} = b - A(x_k + D^{-1}r_k)\\
+\rightarrow = (b - Ax_k) - AD^{-1}r_k\\
+$
+
+\textit{Guass-Seidel}\\
+
+$
+A = (L + D + U)\\
+Ax = b\\
+(D + U)x = b - Lx\\
+(D + U)x_{k+1} = (b - Lx)\rightarrow (D + U)x_{k + 1} = (b - Lx_k)\\
+x = (D + U)^{-1} (b - Lx) \\
+x^{(k + 1)} = (D + U)^{-1} (b - Lx^k)\\
+$\\
+
+We can use our Back-substitution routine to find $(D + U)^{-1}$\\
+
+
+
+\noindent \underline{\hspace{3in}}\\
+
+\end{document}
+
