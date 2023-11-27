@@ -111,7 +111,34 @@ $\\
 
 We can use our Back-substitution routine to find $(D + U)^{-1}$\\
 
+\textit{November 20}\\
 
+\textit{Shifted Power Method}\\
+
+Power Method finds $\lambda_1$, inverse power method finds $\lambda_n$, and shift on the eigenvalue.\\
+
+Lets say:
+$Av = \lambda v\\
+Av - \mu v = \lambda v - \mu v = (\lambda - \mu) v\\
+(A - \mu I) v = (\lambda - \mu) v\\
+$\\
+From this, we can find $\lambda - \mu$ is an eigenvalue of $(A - \mu I)$\\
+
+\textbf{Example:} Let $\lambda_1 = 10, \lambda_n = 0.1$\\
+Find $\lambda_n$ apply the power method to $A^{-1}$\\
+
+let $\lambda - \mu \approx \lambda_{\frac{n}{2}}$\\
+Now, apply the power method to $(A - \mu I) \rightarrow \lambda - \mu$\\
+
+This technique allows us to find eigenvalues between $\lambda_n$ and $\lambda_1$ by iteratively checking values between the min and max eigenvalue.\\
+
+\textit{eigenvalue review}\\
+
+\textbf{Properties:}\\
+\begin{itemize}
+  \item $Ax = \lambda x$ for all $x \neq 0$
+  \item lol that is it. 
+\end{itemize}
 
 \noindent \underline{\hspace{3in}}\\
 

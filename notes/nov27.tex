@@ -1,0 +1,89 @@
+\documentclass[10pt, AMS Euler]{article}
+\textheight=9.25in \textwidth=7in \topmargin=-.75in
+ \oddsidemargin=-0.25in
+\evensidemargin=-0.25in
+\usepackage{url}  % The bib file uses this
+\usepackage{graphicx} %to import pictures
+\usepackage{amsmath, amssymb}
+\usepackage{theorem, concrete, multicol, color}
+
+
+\setlength{\intextsep}{5mm} \setlength{\textfloatsep}{5mm}
+\setlength{\floatsep}{5mm}
+\setlength{\parindent}{0em} % new paragraphs are not indented
+
+
+%%%%  SHORTCUT COMMANDS  %%%%
+\newcommand{\ds}{\displaystyle}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\arc}{\rightarrow}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\blank}{\underline{\hspace{0.33in}}}
+\newcommand{\qand}{\quad and \quad}
+\newcommand{\stirling}[2]{\genfrac{\{}{\}}{0pt}{}{#1}{#2}}
+\newcommand{\dydx}{\ds \frac{d y}{d x}}
+\newcommand{\ddx}{\ds \frac{d}{d x}}
+\newcommand{\dvdx}{\ds \frac{d v}{d x}} 
+
+%%%%  footnote style %%%%
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{flushright}
+Chandler Justice - A02313187
+\end{flushright}
+\noindent \underline{\hspace{3in}}\\
+\textit{November 27, 2023}\\
+\textit{Where we are going with the class}\\
+\begin{itemize}
+  \item Complete Assn. 7 today
+  \item Assn 8 - Using Jacobi to compute iteration solns to $Ax =b$
+  \item Assn 9 - Speed code up using OpenMP
+\end{itemize}
+
+\textit{Iterative methods to computing solutions: Jacobi iteration \& more}\\
+let: $A = L + D + U$\\
+$Ax = b \rightarrow (L + D + U) x = b \rightarrow Dx = b - (L + U)x$\\
+$x = D^{-1}(b- (L + U) x)$\\
+\begin{itemize}
+  \item $L$: A lower triangular matrix with zeros on the diagonal
+  \item $D$: A Matrix with non-zero values only in the diagonal
+  \item $U$: An upper triangular matrix with zeros on the diagonal
+\end{itemize}
+$x^{k+1} = D^{-1} (b - (L + U)x^k)$\\
+$x^{k+1} \rightarrow Ax^* = b$\\
+$x^{k+1} \rightarrow x^*$\\
+\textbf{Note:} $A$ is diagonally dominant\\
+
+\textbf{Implementation for Jacobi}\\
+$Ax + b \rightarrow x^{k+1} = D^{-1}(b - (L + U)x^k) \rightarrow x^*$\\
+\textit{input:} $A \in \R^{n x m}, b \in \R^n, x^0 \in \R^n$, tol maxIter\\
+\textit{initialize:} error = 10 * tol; iter = 0;\\
+\textit{loop:}\\
+while (error $>$ tol \&\& iter $<$ maxIter)\{\\
+for(int i = 0; i < n; i++)\{\\
+double sum = $b_i$;\\
+for(int j = 0; j < n; j++)\{\\
+sum += $a_{i,j} * x_0$;\\
+for(int j = i + 1; j < n; j++)\{\\
+sum += $a_{i,j} * x_0$\}\\
+$x_i = sum / a_{i,i}$;\}\\
+double error = 0.0;\\
+for(int i = 0; i < n; i++)\{\\
+double value = $x1_i - x0_i$;\\
+$error += val + val_i$\}\\
+error = sqrt(error);\\
+iter++;\}\\
+
+
+
+\noindent \underline{\hspace{3in}}\\
+
+\end{document}
+

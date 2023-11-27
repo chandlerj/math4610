@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.11.2)  20 NOV 2023 10:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.11.2)  27 NOV 2023 10:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./nov17.tex
-(nov17.tex
+**./nov27.tex
+(nov27.tex
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-10-23>
 (/home/chandler/.miktex/texmfs/install/tex/latex/base/article.cls
@@ -339,8 +339,8 @@ File: l3backend-pdftex.def 2023-10-23 L3 backend support: PDF output (pdfTeX)
 LaTeX Warning: Unused global option(s):
     [AMSEuler].
 
-(nov17.aux)
-\openout1 = `nov17.aux'.
+(nov27.aux)
+\openout1 = `nov27.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
 LaTeX Font Info:    ... okay on input line 36.
@@ -449,203 +449,93 @@ LaTeX Font Info:    Trying to load font information for U+euex on input line 41
 (/home/chandler/.miktex/texmfs/install/tex/latex/amsfonts/ueuex.fd
 File: ueuex.fd 2013/01/14 v3.01 Euler extra symbols
 )
-Underfull \hbox (badness 10000) in paragraph at lines 41--42
+Underfull \hbox (badness 10000) in paragraph at lines 41--44
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 43--44
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 68--69
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 70--76
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 70--76
+LaTeX Font Info:    Trying to load font information for TS1+ccr on input line 4
+5.
+(/home/chandler/.miktex/texmfs/install/tex/latex/ccfonts/ts1ccr.fd
+File: ts1ccr.fd 1999/11/22 v1.0a (WaS)
+)
+Underfull \hbox (badness 10000) in paragraph at lines 50--54
 
  []
 
 
 LaTeX Font Warning: Font shape `OT1/ccr/b/n' undefined
-(Font)              using `OT1/ccr/bx/n' instead on input line 78.
+(Font)              using `OT1/ccr/bx/n' instead on input line 62.
 
 LaTeX Font Info:    Font shape `OT1/ccr/bx/n' in size <10> not available
-(Font)              Font shape `OT1/cmr/bx/n' tried instead on input line 78.
+(Font)              Font shape `OT1/cmr/bx/n' tried instead on input line 62.
 
-Underfull \hbox (badness 10000) in paragraph at lines 78--80
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 81--82
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 83--84
+Underfull \hbox (badness 10000) in paragraph at lines 59--63
 
  []
 
 
 LaTeX Font Warning: Font shape `OT1/ccr/b/n' undefined
-(Font)              using `OT1/ccr/bx/n' instead on input line 85.
+(Font)              using `OT1/ccr/bx/n' instead on input line 64.
 
+LaTeX Font Info:    Trying to load font information for OMS+ccr on input line 6
+9.
+(/home/chandler/.miktex/texmfs/install/tex/latex/concmath/omsccr.fd
+File: omsccr.fd 1999/03/10 v2.0b LaTeX font defs for Concrete math fonts
+)
+LaTeX Font Info:    Trying to load font information for OMS+ccsy on input line 
+69.
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
+(/home/chandler/.miktex/texmfs/install/tex/latex/concmath/omsccsy.fd
+File: omsccsy.fd 1999/03/10 v2.0b LaTeX font defs for Concrete math fonts
+)
+LaTeX Font Info:    Font shape `OMS/ccr/m/n' in size <10> not available
+(Font)              Font shape `OMS/ccsy/m/n' tried instead on input line 69.
 
- []
-
-
-LaTeX Font Warning: Font shape `OT1/ccr/b/n' undefined
-(Font)              using `OT1/ccr/bx/n' instead on input line 87.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 87--92
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 93--94
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 95--100
+Underfull \hbox (badness 10000) in paragraph at lines 64--83
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 101--102
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 103--111
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 103--111
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
 
  []
 
 [1
 
-{/home/chandler/.miktex/texmfs/data/fonts/map/pdftex/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 112--113
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 114--115
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 116--117
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 118--119
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 120--126
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 120--126
-
- []
-
-
-LaTeX Font Warning: Font shape `OT1/ccr/b/n' undefined
-(Font)              using `OT1/ccr/bx/n' instead on input line 127.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 127--129
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 130--132
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 133--134
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 135--136
-
- []
-
-
-LaTeX Font Warning: Font shape `OT1/ccr/b/n' undefined
-(Font)              using `OT1/ccr/bx/n' instead on input line 137.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 137--138
-
- []
-
-LaTeX Font Info:    Trying to load font information for TS1+ccr on input line 1
-39.
-(/home/chandler/.miktex/texmfs/install/tex/latex/ccfonts/ts1ccr.fd
-File: ts1ccr.fd 1999/11/22 v1.0a (WaS)
-)
-Underfull \hbox (badness 10000) in paragraph at lines 143--144
-
- []
-
-[2] (nov17.aux)
+{/home/chandler/.miktex/texmfs/data/fonts/map/pdftex/pdftex.map}] (nov27.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-10-23>
  ***********
 
-
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 3102 strings out of 474719
- 47817 string characters out of 5751795
- 1937033 words of memory out of 5000000
- 25098 multiletter control sequences out of 15000+600000
- 564366 words of font info for 62 fonts, out of 8000000 for 9000
+ 3128 strings out of 474719
+ 48383 string characters out of 5751795
+ 1932033 words of memory out of 5000000
+ 25117 multiletter control sequences out of 15000+600000
+ 564623 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,8n,65p,250b,163s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </home/chandler/.miktex/texmfs/data/fonts/pk/ljfour/public/ecc/dpi600/torm10
-.pk> </home/chandler/.miktex/texmfs/data/fonts/pk/ljfour/public/concrete/dpi600
-/ccti10.pk> </home/chandler/.miktex/texmfs/data/fonts/pk/ljfour/public/concrete
-/dpi600/ccr10.pk></home/chandler/.miktex/texmfs/install/fonts/type1/public/amsf
-onts/cm/cmbx10.pfb></home/chandler/.miktex/texmfs/install/fonts/type1/public/am
-sfonts/cm/cmex10.pfb></home/chandler/.miktex/texmfs/install/fonts/type1/public/
-amsfonts/cm/cmsy10.pfb></home/chandler/.miktex/texmfs/install/fonts/type1/publi
-c/amsfonts/euler/euex10.pfb></home/chandler/.miktex/texmfs/install/fonts/type1/
-public/amsfonts/euler/eufm10.pfb></home/chandler/.miktex/texmfs/install/fonts/t
-ype1/public/amsfonts/euler/eufm7.pfb></home/chandler/.miktex/texmfs/install/fon
-ts/type1/public/amsfonts/euler/eurm10.pfb></home/chandler/.miktex/texmfs/instal
-l/fonts/type1/public/amsfonts/euler/eurm5.pfb></home/chandler/.miktex/texmfs/in
-stall/fonts/type1/public/amsfonts/euler/eurm7.pfb></home/chandler/.miktex/texmf
-s/install/fonts/type1/public/amsfonts/euler/eusm10.pfb>
-Output written on nov17.pdf (2 pages, 94887 bytes).
+ 57i,5n,65p,250b,163s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ </home/chandler/.miktex/texmfs/data/fonts/pk/ljfour/public/concmath-fonts/dp
+i600/xccsy10.pk> </home/chandler/.miktex/texmfs/data/fonts/pk/ljfour/public/ecc
+/dpi600/torm10.pk> </home/chandler/.miktex/texmfs/data/fonts/pk/ljfour/public/c
+oncrete/dpi600/ccti10.pk> </home/chandler/.miktex/texmfs/data/fonts/pk/ljfour/p
+ublic/concrete/dpi600/ccr10.pk></home/chandler/.miktex/texmfs/install/fonts/typ
+e1/public/amsfonts/cm/cmbx10.pfb></home/chandler/.miktex/texmfs/install/fonts/t
+ype1/public/amsfonts/cm/cmsy10.pfb></home/chandler/.miktex/texmfs/install/fonts
+/type1/public/amsfonts/cm/cmsy7.pfb></home/chandler/.miktex/texmfs/install/font
+s/type1/public/amsfonts/euler/euex10.pfb></home/chandler/.miktex/texmfs/install
+/fonts/type1/public/amsfonts/euler/eufm10.pfb></home/chandler/.miktex/texmfs/in
+stall/fonts/type1/public/amsfonts/euler/eufm7.pfb></home/chandler/.miktex/texmf
+s/install/fonts/type1/public/amsfonts/euler/eurm10.pfb></home/chandler/.miktex/
+texmfs/install/fonts/type1/public/amsfonts/euler/eurm7.pfb></home/chandler/.mik
+tex/texmfs/install/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on nov27.pdf (1 page, 89144 bytes).
 PDF statistics:
- 158 PDF objects out of 1000 (max. 8388607)
+ 155 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
