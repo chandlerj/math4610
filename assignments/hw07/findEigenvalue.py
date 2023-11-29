@@ -52,7 +52,7 @@ def findEvalInterval(A: np.array, v0: np.array, tol: float, maxIter: int, numPar
     return eigenvalues
 def findTwoLargestEvalues(A: np.array, v0: np.array, tol: float, maxIter: int):
     
-    eVec_list = findEvalInterval(A, v0, tol, maxIter, 10) 
+    eVec_list = findEvalInterval(A, v0, tol, maxIter, len(A) - 2) 
     n = len(eVec_list)
     eVec_list.sort()
     return (eVec_list[n-1], eVec_list[n-2])
@@ -130,7 +130,7 @@ print(findLargestEigenvalue(leslie_m, leslie_guess, 0.001, 100))
 print(findLargestEigenvalue(matrix, guess1, 0.001, 100))
 print(shiftedPowerMethod(matrix, guess1, 0.001, 100))
 print(findTwoLargestEvalues(matrix, guess1, 0.001, 100))
-print(findEvalInterval(matrix, guess1, 0.001, 100, 5))
+print(findEvalInterval(matrix, guess1, 0.001, 100, 3))
 
 print(findSmallestEigenvalue(matrix2, guess2, 0.0001, 100))
 print(findLargestEigenvalue(matrix2, guess2, 0.001, 100))

@@ -40,7 +40,7 @@ Chandler Justice - A02313187
 \end{flushright}
 \noindent \underline{\hspace{3in}}\\
 \textit{November 27, 2023}\\
-\textit{Where we are going with the class}\\
+\textit{Where we are going with the class}
 \begin{itemize}
   \item Complete Assn. 7 today
   \item Assn 8 - Using Jacobi to compute iteration solns to $Ax =b$
@@ -65,6 +65,7 @@ $x^{k+1} \rightarrow x^*$\\
 $Ax + b \rightarrow x^{k+1} = D^{-1}(b - (L + U)x^k) \rightarrow x^*$\\
 \textit{input:} $A \in \R^{n x m}, b \in \R^n, x^0 \in \R^n$, tol maxIter\\
 \textit{initialize:} error = 10 * tol; iter = 0;\\
+
 \textit{loop:}\\
 while (error $>$ tol \&\& iter $<$ maxIter)\{\\
 for(int i = 0; i < n; i++)\{\\
@@ -81,8 +82,38 @@ $error += val + val_i$\}\\
 error = sqrt(error);\\
 iter++;\}\\
 
+\textit{November 29, 2023}\\
 
+\textbf{Guass-Seidel Iteration}\\
+$A = (L + D + U) \rightarrow Ax = b$\\
+$(D + U) x = b - L x$\\
+$x = (D + U)^{-1} (b - L x)$\\
+$x^{(k+1)} = (D + U)^{-1} (b - Lx^k)$\\
+$(D + U)^{-1} x$ (Use back substitution to obtain $(D + U)^{-1}$)\\
+Residual formula: $x^{k+1} = (D + U)^{-1} (b - (L + D + U - D - U) x^k)$\\
+$\rightarrow (D + U)^{-1} (b - Ax^k + (D + U)x^k) \rightarrow x^k + (D + U)^{-1} r^k$\\
+$r^k = b - Ax^k$\\
 
+\textit{Example - Leslie Matrix}\\
+$\L =
+\begin{bmatrix}
+  f_0 & f_1 & ... & f_n\\
+  s_0 & 0 & ... & 0\\
+  0 & s_1 & ... & 0\\
+  ...\\
+  0 & ... & s_{n-1} & 0\\
+\end{bmatrix}\\
+$\\
+$LN_0 \rightarrow N_1 \rightarrow N_0 = L^{-1} N $\\
+We can decompose this matrix into three separate matrices $L, U, D$. We cannot apply iterative methods to finding solutions for this decomposition (or the original matrix) because there are too many zero values, which have an inverse of $\infty$.\\
+
+\textit{Time complexity of iterative solvers}
+\begin{itemize}
+  \item GE + BS $\approx O(n^3) + O(n^2) \rightarrow O(n^3)$
+  \item LU + FS + BS $\approx O(n^3) + O(n^2) + O(n^2)$
+  \item Jacobi $\approx O(n^2) /$ iteration
+  \item Guass-Seidel $\approx O(n^2) /$ iteration
+\end{itemize}
 \noindent \underline{\hspace{3in}}\\
 
 \end{document}
