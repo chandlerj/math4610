@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.11.2)  29 NOV 2023 10:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.11.2)  1 DEC 2023 10:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -455,59 +455,59 @@ LaTeX Font Info:    Trying to load font information for TS1+ccr on input line 4
 (/home/chandler/.miktex/texmfs/install/tex/latex/ccfonts/ts1ccr.fd
 File: ts1ccr.fd 1999/11/22 v1.0a (WaS)
 )
-Underfull \hbox (badness 10000) in paragraph at lines 50--54
+Underfull \hbox (badness 10000) in paragraph at lines 49--53
 
  []
 
 
 LaTeX Font Warning: Font shape `OT1/ccr/b/n' undefined
-(Font)              using `OT1/ccr/bx/n' instead on input line 62.
+(Font)              using `OT1/ccr/bx/n' instead on input line 61.
 
 LaTeX Font Info:    Font shape `OT1/ccr/bx/n' in size <10> not available
-(Font)              Font shape `OT1/cmr/bx/n' tried instead on input line 62.
+(Font)              Font shape `OT1/cmr/bx/n' tried instead on input line 61.
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--63
+Underfull \hbox (badness 10000) in paragraph at lines 58--62
 
  []
 
 
 LaTeX Font Warning: Font shape `OT1/ccr/b/n' undefined
-(Font)              using `OT1/ccr/bx/n' instead on input line 64.
+(Font)              using `OT1/ccr/bx/n' instead on input line 63.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--68
+Underfull \hbox (badness 10000) in paragraph at lines 63--67
 
  []
 
-LaTeX Font Info:    Trying to load font information for OMS+ccr on input line 7
-0.
+LaTeX Font Info:    Trying to load font information for OMS+ccr on input line 6
+9.
 (/home/chandler/.miktex/texmfs/install/tex/latex/concmath/omsccr.fd
 File: omsccr.fd 1999/03/10 v2.0b LaTeX font defs for Concrete math fonts
 )
 LaTeX Font Info:    Trying to load font information for OMS+ccsy on input line 
-70.
+69.
 
 (/home/chandler/.miktex/texmfs/install/tex/latex/concmath/omsccsy.fd
 File: omsccsy.fd 1999/03/10 v2.0b LaTeX font defs for Concrete math fonts
 )
 LaTeX Font Info:    Font shape `OMS/ccr/m/n' in size <10> not available
-(Font)              Font shape `OMS/ccsy/m/n' tried instead on input line 70.
+(Font)              Font shape `OMS/ccsy/m/n' tried instead on input line 69.
 
-Underfull \hbox (badness 10000) in paragraph at lines 69--84
+Underfull \hbox (badness 10000) in paragraph at lines 68--83
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
+Underfull \hbox (badness 10000) in paragraph at lines 84--85
 
  []
 
 
 LaTeX Font Warning: Font shape `OT1/ccr/b/n' undefined
-(Font)              using `OT1/ccr/bx/n' instead on input line 87.
+(Font)              using `OT1/ccr/bx/n' instead on input line 86.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--96
+Underfull \hbox (badness 10000) in paragraph at lines 86--95
 
  []
 
@@ -515,20 +515,67 @@ Underfull \hbox (badness 10000) in paragraph at lines 87--96
 
 {/home/chandler/.miktex/texmfs/data/fonts/map/pdftex/pdftex.map}]
 
-LaTeX Warning: Command \L invalid in math mode on input line 98.
+LaTeX Warning: Command \L invalid in math mode on input line 97.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--109
+Underfull \hbox (badness 10000) in paragraph at lines 96--108
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--109
+Underfull \hbox (badness 10000) in paragraph at lines 96--108
 
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 117--118
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--120
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 121--123
+
+ []
+
+
+LaTeX Font Warning: Font shape `OT1/ccr/b/n' undefined
+(Font)              using `OT1/ccr/bx/n' instead on input line 126.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 124--127
+
+ []
+
+
+LaTeX Font Warning: Font shape `OT1/ccr/b/n' undefined
+(Font)              using `OT1/ccr/bx/n' instead on input line 129.
+
+
+LaTeX Font Warning: Font shape `OT1/ccr/b/n' undefined
+(Font)              using `OT1/ccr/bx/n' instead on input line 132.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 129--135
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 136--137
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 143--144
 
  []
 
@@ -543,10 +590,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 3130 strings out of 474719
- 48441 string characters out of 5751795
- 1933033 words of memory out of 5000000
- 25119 multiletter control sequences out of 15000+600000
+ 3132 strings out of 474719
+ 48499 string characters out of 5751795
+ 1935033 words of memory out of 5000000
+ 25121 multiletter control sequences out of 15000+600000
  564623 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,8n,65p,262b,163s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -565,9 +612,9 @@ install/fonts/type1/public/amsfonts/euler/eufm7.pfb></home/chandler/.miktex/tex
 mfs/install/fonts/type1/public/amsfonts/euler/eurm10.pfb></home/chandler/.mikte
 x/texmfs/install/fonts/type1/public/amsfonts/euler/eurm7.pfb></home/chandler/.m
 iktex/texmfs/install/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on nov27.pdf (2 pages, 108862 bytes).
+Output written on nov27.pdf (2 pages, 114028 bytes).
 PDF statistics:
- 181 PDF objects out of 1000 (max. 8388607)
+ 190 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

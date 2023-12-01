@@ -46,7 +46,6 @@ Chandler Justice - A02313187
   \item Assn 8 - Using Jacobi to compute iteration solns to $Ax =b$
   \item Assn 9 - Speed code up using OpenMP
 \end{itemize}
-
 \textit{Iterative methods to computing solutions: Jacobi iteration \& more}\\
 let: $A = L + D + U$\\
 $Ax = b \rightarrow (L + D + U) x = b \rightarrow Dx = b - (L + U)x$\\
@@ -113,6 +112,33 @@ We can decompose this matrix into three separate matrices $L, U, D$. We cannot a
   \item LU + FS + BS $\approx O(n^3) + O(n^2) + O(n^2)$
   \item Jacobi $\approx O(n^2) /$ iteration
   \item Guass-Seidel $\approx O(n^2) /$ iteration
+\end{itemize}
+
+\textit{December 1, 2023}\\
+
+\textit{Guass-seidel elimination cont.}\\
+
+$x^{k+1} = x^k + "(D + U)^{-1}" r^k$\\
+$x^0, x^1, x^2, ... \rightarrow Ax^k = b$\\
+
+\textit{LU-factorization}\\
+Let $A \in \R^{n x m}$\\
+\textbf{note:} $A$ is diagonally dominant\\
+
+
+\textbf{some table koebbe wrote on the board}\\
+\begin{tabular}{c c c}
+    LU-factorization & jacobi & guass-seidel\\
+    num. flops and error & num. flops and error & \textbf{ditto}\\
+    
+\end{tabular}\\
+
+We need to compare and constrast the results of these metrics to determine which approach is best given the input.\\
+
+\textit{Overview of upcoming homework}\\
+\begin{itemize}
+    \item hw08: due at the end of finals week
+    \item Using OpenMP to parallelize $2$ linear solving algorithms (will use code from hw08). Due at end of finals week
 \end{itemize}
 \noindent \underline{\hspace{3in}}\\
 
